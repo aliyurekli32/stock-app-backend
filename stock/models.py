@@ -22,3 +22,10 @@ class Firm(models.Model):
     name = models.CharField(max_length=15)
     phone_number = models.PhoneNumberField(blank=True)
     address = models.CharField(max_length=100)
+    
+#? Table-4 Product
+class Product(models.Model):
+    name = models.CharField(max_length=15)
+    category = models.ForeignKey(Category,verbose_name="Category" on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand,verbose_name="Brand",on_delete=models.CASCADE)
+    stock_number=models.IntegerField()
