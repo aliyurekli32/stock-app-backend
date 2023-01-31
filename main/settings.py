@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     #myapps
     'rest_framework',
+    'phonenumber_field',
     
 ]
 
